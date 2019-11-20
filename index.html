@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smooth Scrolling Single Page Navigation</title>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="well">
+        <nav class="navbar">
+            <ul>
+                <li class="active"><a class="scroll" href="#home">Home</a></li>
+                <li><a class="scroll" href="#about">About</a></li>
+                <li><a class="scroll" href="#services">Services</a></li>
+                <li><a class="scroll" href="#galleries">Gallery</a></li>
+                <li><a class="scroll" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="home">
+            <div class="welcome">
+                <img src="./images/becky3.jpeg" class="home-img" />
+                <div class="welcome-msg">
+                    <h1>Hello! I'm Becky</h1>
+                    <p>I do hair and makeup</p>
+                </div>
+            </div>
+        </section>
+        <section class="sticky" id="about">
+            <div class="about-content">
+                <blockquote>"It was perfect for my big day, I couldn't have asked for more."<span></span></blockquote>
+                <img id="img1" src="images/becky.jpeg" />
+                <img id="img2" src="images/becky3.jpeg" />
+                <div id="box"></div>
+            </div>
+        </section>
+        <section id="services">
+            <h1>Services</h1>
+            <div class="services">
+                <div class="service">
+                    <h2>Haircuts</h2>
+                    <p>Every appointment begins with a conversation to identify your desired hair length and look. Then your stylist washes, cuts, and styles your hair using high quality hair-care products that ensure a salon professional finish.
+                    </p>
+                </div>
+                <div class="service">
+                    <h2>Trend Color Techniques</h2>
+                    <p>Add beauty and interest to your hair with one of these fashion-forward color techniques. Ask your stylist what’s right for you.
+                    </p>
+                </div>
+                <div class="service">
+                    <h2>Specialty Services</h2>
+                    <p>From elegant to edgy, make sure your look is memorable with these special occasion services. Or, when you’re going for a whole new style, like a perm or retexturization, our expert stylists can help.
+                    </p>
+                </div>
+                <div class="service">
+                    <h2>Highlights</h2>
+                    <p>Every appointment begins with a conversation to identify your desired hair length and look. Then your stylist washes, cuts, and styles your hair using high quality hair-care products that ensure a salon professional finish.
+                    </p>
+                </div>
+                <div class="service">
+                    <h2>Deep Conditioning Treatments</h2>
+                    <p>Add beauty and interest to your hair with one of these fashion-forward color techniques. Ask your stylist what’s right for you.
+                    </p>
+                </div>
+                <div class="service">
+                    <h2>All-over Color</h2>
+                    <p>From elegant to edgy, make sure your look is memorable with these special occasion services. Or, when you’re going for a whole new style, like a perm or retexturization, our expert stylists can help.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="galleries">
+            <h1>The Galleries Of This Site</h1>
+            <div class="galleries">
+                <div class="gallery-container">
+                    <div class="gallery-main-img">
+                        <img src="images/becky3.jpeg" id="current" />
+                    </div>
+                    <div class="gallery-imgs">
+                        <img src="images/becky3.jpeg" />
+                        <img src="images/Services-cuts.png" />
+                        <img src="images/services-color.jpg" />
+                        <img src="images/services-deep-conditioning.jpg" />
+                        <img src="images/services-highlights.jpg" />
+                        <img src="images/services-trend-colour.jpg" />
+                        <img src="images/speciality-service.jpg" />
+                        <img src="images/becky2.jpeg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h1>Contact Me</h1>
+
+            <form class="contact-form">
+                <div class="form-group" id="firstName">
+                    <label for="name">First Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName" id="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="phone" id="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="310 - 555 - 3806">
+                </div>
+                <div class="form-group" id="email">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group" id="message">
+                    <label for="message">Send me a message</label>
+                    <textarea class="form-control" id="message" placeholder="Message goes here"></textarea>
+                </div>
+                <button type="submit" id="button" class="btn btn-primary">Submit</button>
+            </form>
+            <div class="gmap">
+                <h2>Come Find Us!</h2>
+                <p>Call us at (310) 555 - 8605<br />Or walk-ins are welcome at
+                    <br />4156 Norse Way, Long Beach, CA 90808
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15765.845001444943!2d-118.1349450166735!3d33.828809097678175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe0e498d05f4cb06e!2sBombshell!5e0!3m2!1sen!2sus!4v1574200378230!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </section>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <!-- cdns for scroll magic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
