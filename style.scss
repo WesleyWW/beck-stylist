@@ -1,4 +1,6 @@
 @import './scss/config';
+@import './scss/menu';
+@import './scss/mobile';
 
 
 * {
@@ -25,40 +27,54 @@ body {
     top: 0;
     z-index: 1;
     display: flex;
+    justify-content: center;
     width: 100%;
     height: 60px;
     background: rgba(255, 255, 255, 0.7);
     border-bottom: 4px solid $primary-color;
 
-    a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $primary-color;
-    }
-    a:hover {
-        color: $secondary-color;
-    }
-
-    ul {
-        display: flex;
-        list-style: none;
-        width: 100%;
-        justify-content: center;
+    &-nav {
         
-        li {
-            margin: 0 1rem;
-            padding: 1rem;
+        .nav-items {
+            display: flex;
+            // flex-direction: row;
+            list-style: none;
+            width: 100%;
+            justify-content: center;
+            
+            li {
+                margin: 0 1rem;
+                padding: 1rem;
 
-            &.active {
                 a {
+                    color: $secondary-color;
+                }
+                a:hover {
                     padding: 0.5rem;
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
                     color: $secondary-color;
+                    background-color: $primary-color;
                 }
-            }
 
+                &.active {
+                    a {
+                        padding: 0.5rem;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+                        color: $secondary-color;
+                        background-color: $primary-color;
+                    }
+                }
+
+            }
         }
     }
+    
+
+    // .nav-branding {
+    //     display: none;
+    // }
+
+    
 }//end navbar
 
 
@@ -96,6 +112,30 @@ section#home {
             flex-direction: column;
             justify-content: center;
             align-content: center;
+
+            .social-links {
+                width: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                padding: 10px;
+
+                a {
+                    color: $accent-color;
+                }
+
+                a:hover {
+                    color: $secondary-color;
+                }
+
+                i {
+                    font-size: 3.3rem;
+                }
+
+                i:hover {
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
@@ -160,12 +200,6 @@ section#about {
     //     color: $primary-color;
     // }
 
-    // .gmap {
-    //     margin-left: 20px;
-    //     padding: 35px 6px;
-    //     color: $primary-color;
-    //     // background-color: rgba($secondary-color, 0.75)
-    // }
 }
 
 section#services {
@@ -238,6 +272,10 @@ section#galleries {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 grid-gap: 15px;
+
+                img:hover {
+                    cursor: pointer;
+                }
             }
 
         }
@@ -280,5 +318,29 @@ section#contact {
         #button {
             grid-area: but;
         }
+    }
+
+    
+    .gmap {
+        margin: 20px 0 40px 0;
+        padding: 35px 6px;
+        color: $primary-color;
+        // background-color: rgba($secondary-color, 0.75)
+    }
+}
+
+footer {
+    width: 100%;
+    padding: 12px;
+    border: 4px solid $primary-color;
+    background-color: $accent-color;
+    color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+        margin: 0;
     }
 }
