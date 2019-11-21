@@ -227,6 +227,14 @@ section#services {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 35px;
 
+        @include mediaMd {
+                //change services grid
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mediaSm {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         .service {
             padding: 6px;
             background-color: rgba($accent-color, 0.8);
@@ -253,6 +261,10 @@ section#galleries {
             justify-content: center;
             align-items: center;
             width: 80%;
+            @include mediaMd {
+                flex-direction: column;
+                width: 90%;
+            }
 
             img {
                 width: 100%;
@@ -272,6 +284,9 @@ section#galleries {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 grid-gap: 15px;
+                @include mediaMd {
+                    grid-template-columns: repeat(3, 1fr);
+                }
 
                 img:hover {
                     cursor: pointer;
