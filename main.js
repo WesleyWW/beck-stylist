@@ -63,19 +63,6 @@ function toggleMenu() {
     }
 }
 
-// //SMOOTH SCROLL
-// $('.navbar a').click(function(e) {
-//     if(this.hash !== '') {
-//         e.preventDefault();
-
-//         const hash = this.hash;
-
-//         $('html, body').animate({
-//             scrollTop: $(hash).offset().top
-//         }, 900);
-//     }
-// });
-
 //IMAGE GALLERIES
 const currentImg = document.querySelector('#current');
 const imgs = document.querySelectorAll('.gallery-imgs img');
