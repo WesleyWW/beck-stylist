@@ -94,6 +94,13 @@ section#home {
         color: $accent-color;
         animation: 1s ease-out 0s 1 slideInFromLeft;
 
+        @include mediaMd {
+            flex-flow: row wrap;
+        }
+        @include mediaSm {
+            flex-flow: row wrap;
+        }
+        
         &.show {
             //SLIDE IN FROM RIGHT
             transform: translate3d(0, 0, 0);
@@ -104,6 +111,15 @@ section#home {
             width: 350px;
             border: 10px solid $accent-color;
             border-radius: 50%;
+
+            @include mediaMd {
+                height: 275px;
+                width: 275px;
+            }
+            @include mediaSm {
+                height: 150px;
+                width: 150px;
+            }
         }
 
         .welcome-msg {
@@ -111,7 +127,21 @@ section#home {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-content: center;
+            align-content: center;  
+
+            @include mediaMd {
+                h1 {
+                    font-size: 3rem;
+                }
+            }
+            @include mediaSm {
+                h1 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1.4rem;
+                }
+            }
 
             .social-links {
                 width: 100%;
@@ -145,6 +175,7 @@ section#about {
 
     .about-content {
         padding: 3px;
+        margin: auto;
         width: 85%;
         height: 100%;
         position: relative;
@@ -265,6 +296,14 @@ section#galleries {
                 flex-direction: column;
                 width: 90%;
             }
+            @include mediaSm {
+                flex-direction: column;
+                width: 90%;
+
+                img#current {
+                    margin: 35px 0;
+                }
+            }
 
             img {
                 width: 100%;
@@ -274,6 +313,13 @@ section#galleries {
                 margin-right: 20px;
                 padding: 0;
                 width: 30%;
+
+                @include mediaMd {
+                    width: 80%;
+                }
+                @include mediaSm {
+                    width: 100%;
+                }
                 
                 img {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
@@ -284,9 +330,12 @@ section#galleries {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 grid-gap: 15px;
-                @include mediaMd {
-                    grid-template-columns: repeat(3, 1fr);
-                }
+                // @include mediaMd {
+                //     grid-template-columns: repeat(3, 1fr);
+                // }
+                // @include mediaSm {
+                //     grid-template-columns: repeat(3, 1fr);
+                // }
 
                 img:hover {
                     cursor: pointer;
